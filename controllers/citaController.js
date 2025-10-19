@@ -1,4 +1,4 @@
-
+const { pool } = require('../config/db');
 exports.getAll = (req, res) => {
   const sql = `SELECT ci.id, ci.fecha, ci.hora, ci.motivo, ci.id_mascota, ci.id_veterinario, m.nombre AS mascota, m.especie, c.nombre AS cliente, v.nombre AS veterinario
                FROM cita ci
